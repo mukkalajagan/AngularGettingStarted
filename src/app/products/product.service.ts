@@ -11,7 +11,6 @@ import { catchError, tap } from 'rxjs/operators';
 export class ProductService {
   private productUrl = 'api/products/products.json';
   constructor(private http: HttpClient ) {
-
   }
     getProducts(): Observable<IProduct[]> {
         return this.http.get<IProduct[]>(this.productUrl).pipe(
